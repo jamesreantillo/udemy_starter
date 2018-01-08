@@ -6,13 +6,15 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 html {
-    font-size: 10px;
+    font-size: 62.5%;
 }
 body {
     font-family: "Lato", sans-serif;
@@ -21,6 +23,7 @@ body {
     line-height: 1.7;
     color: #777;
     padding: 3rem;
+    box-sizing: border-box;
 }
 .header {
     height: 95vh;
@@ -34,15 +37,15 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
 }
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
-.logo {
+.header__logo {
     height: 3.5rem;
 }
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -55,7 +58,7 @@ body {
     backface-visibility: hidden;
     margin-bottom: 6rem;
 }
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -68,7 +71,7 @@ body {
     /* animation-delay: 2s;
     animation-iteration-count: 5; */
 }
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -126,7 +129,7 @@ body {
     text-decoration: none;
     padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 1rem;
+    border-radius: 10rem;
     transition: all .2s;
     -moz-transition: .all .2s;
     position: relative;
@@ -134,15 +137,13 @@ body {
 }
 .btn:hover {
     transform: translateY(-.3rem);
-    -moz-transform: translateY(-.3rem);
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 .btn:active{
     transform: translateY(-.1rem);
-    -moz-transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
-.btn-white {
+.btn--white {
     background-color: #fff;
     color:  #777
 }
@@ -161,7 +162,7 @@ body {
 }
 
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -170,7 +171,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
