@@ -58,7 +58,7 @@
         transition: all .5s .2s;
 
         @include respond(phone) {
-            width: 100%;
+            width: 90%;
         }
 
         
@@ -89,6 +89,7 @@
         vertical-align: middle;
         padding: 3rem 5rem;
 
+        
     }
 
     &__img {
